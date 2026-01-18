@@ -1,4 +1,3 @@
-# Criando tabela
 use Cadastro;
 create table Pessoas (
 nome varchar(30),
