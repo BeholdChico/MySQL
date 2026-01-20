@@ -1,0 +1,18 @@
+drop database cadastro;
+
+create database cadastro
+default character set utf8
+default collate utf8_general_ci;
+
+USE cadastro;
+
+CREATE TABLE pessoas (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    nascimento DATE,
+    sexo ENUM('M', 'F'),
+    peso DECIMAL(5, 2), -- Ex: 123.45
+    altura DECIMAL(3, 2), -- Ex: 1.75 (atenção: 3 dígitos no total, 2 após a vírgula)
+    nacionalidade VARCHAR(20) DEFAULT 'Brasil',
+    PRIMARY KEY (id)
+);
